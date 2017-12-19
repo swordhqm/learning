@@ -352,7 +352,7 @@ process 变量里的东西
             '/node_modules' 
           ] 
       } 
-}
+    }
 
 
 
