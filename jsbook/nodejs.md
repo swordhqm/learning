@@ -349,7 +349,10 @@ process 变量里的东西
             '/home/kevin/workspace/node_modules',
             '/home/kevin/node_modules',
             '/home/node_modules',
-            '/node_modules' ] } }
+            '/node_modules' 
+          ] 
+      } 
+}
 
 
 
