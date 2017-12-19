@@ -24,7 +24,7 @@ relativePath 比如 ./tmp，../../tmp
 
 process 变量里的东西
 
-常用: argv
+常用: argv, pwd
 
     process {
       title: 'node',
