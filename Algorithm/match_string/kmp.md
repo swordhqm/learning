@@ -40,7 +40,7 @@ ababa          ababb
 ababab         bababb
 abababb        abababb
 
-
+=================================按上面提供的思路逐步获取Next数组
 
 next[0] = -1
 next[1] = 0
