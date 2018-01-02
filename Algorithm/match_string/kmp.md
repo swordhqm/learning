@@ -12,5 +12,7 @@ KMP 快的原因，只需要跳步模式串，主串不需要回溯
 
 ![](/assets/match_string/kmp01.jpg)
 
+核心问题，如何求解Next数组
+
 
 
