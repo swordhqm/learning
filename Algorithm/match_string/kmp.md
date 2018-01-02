@@ -70,10 +70,11 @@ Next[6] = 4
 
 =================================匹配过程
 abab babababbbab
-abab abb
-  ab ababb
-	 a bababb
-	  abababb
+abab abb				j=4, j->Next[4] = 2
+  ab ababb				j=2, j->Next[2] = 0
+	 a bababb				j=0, j->Next[0] = -1
+	  abababb				i++, 逐个匹配
+
 ```
 
 
