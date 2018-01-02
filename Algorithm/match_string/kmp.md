@@ -12,6 +12,8 @@ KMP 快的原因，只需要跳步模式串，主串不需要回溯
 
 ![](/assets/match_string/kmp01.jpg)
 
+![](/assets/match_string/kmp02.jpg)
+
 核心问题，如何求解Next数组
 
 ```
@@ -25,7 +27,9 @@ KMP 快的原因，只需要跳步模式串，主串不需要回溯
 ```
 
 ```
-s  a b a b a b b
+==================================前后缀
+如果在x位未匹配成功，其实是不存在前后缀
+s  a b a b a b b x
 j= 0 1 2 3 4 5 6
 a              b
 ab             bb
@@ -34,6 +38,8 @@ abab           babb
 ababa          ababb
 ababab         bababb
 abababb        abababb
+
+
 
 next[0] = -1
 next[1] = 0
