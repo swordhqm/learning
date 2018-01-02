@@ -67,6 +67,13 @@ Next[5] = 3
 j = 6
 j-1 字符 s[5] 和 Next[j-1] s[3] 相等
 Next[6] = 4
+
+=================================匹配过程
+abab babababbbab
+abab abb
+  ab ababb
+	 a bababb
+	  abababb
 ```
 
 
