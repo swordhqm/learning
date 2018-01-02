@@ -27,13 +27,13 @@ KMP 快的原因，只需要跳步模式串，主串不需要回溯
 ```
 s  a b a b a b b
 j= 0 1 2 3 4 5 6
-a			b
-ab			bb
-aba			abb
-abab		babb
-ababa		ababb
-ababab		bababb
-abababb		abababb
+a              b
+ab             bb
+aba            abb
+abab           babb
+ababa          ababb
+ababab         bababb
+abababb        abababb
 
 next[0] = -1
 next[1] = 0
@@ -60,7 +60,6 @@ Next[5] = 3
 j = 6
 j-1 字符 s[5] 和 Next[j-1] s[3] 相等
 Next[6] = 4
-
 ```
 
 
