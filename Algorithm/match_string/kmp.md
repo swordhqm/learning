@@ -14,5 +14,54 @@ KMP 快的原因，只需要跳步模式串，主串不需要回溯
 
 核心问题，如何求解Next数组
 
+```
+首先next[0]=-1,next[1]=0；
+之后每一位j的next求解: 
+比较j-1字符与next[j-1]是否相等， 
+如果相等则next[j]=next[j-1]+1, 
+如果不相等，则比较j-1字符与next[next[j-1]]是否相等， 
+1) 如果相等则next[next[j-1]]+1, 
+2)如果不相等则继续以此下去，直到next[…]=-1,则next[j]=0.
+```
+
+```
+s  a b a b a b b
+j= 0 1 2 3 4 5 6
+a			b
+ab			bb
+aba			abb
+abab		babb
+ababa		ababb
+ababab		bababb
+abababb		abababb
+
+next[0] = -1
+next[1] = 0
+
+j = 2
+j-1 字符 s[1] 和 Next[j-1] s[0]
+不等
+j-1 字符 和 Next[Next[j-1]] 字符
+s[1] 和 Next[0] = -1 处字符 由于不存在
+Next[2] = 0
+
+j = 3
+j-1 字符 s[2] 和 Next[j-1] s[0] 相等
+Next[3] = 1
+
+j = 4
+j-1 字符 s[3] 和 Next[j-1] s[1] 相等
+Next[4] = 2
+
+j = 5
+j-1 字符 s[4] 和 Next[j-1] s[2] 相等
+Next[5] = 3
+
+j = 6
+j-1 字符 s[5] 和 Next[j-1] s[3] 相等
+Next[6] = 4
+
+```
+
 
 
