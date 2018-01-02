@@ -21,5 +21,5 @@ def match(s, p):
 match("asnbsdfb", "bsdf"）
 ```
 
-![](/assets/naivealgorithm.svg)
+![](/assets/match_string/naivealgorithm.svg)
 
