@@ -82,3 +82,77 @@ abab abb                j=4, j->Next[4] = 2
 
 
 
+## 代码
+
+```py
+#-*-coding:utf-8-*-
+
+'''
+next[0] = -1 意味 主串游标i需要移动
+next[1] 或者 next[j] = 0 意味模式串需要在0位置比较
+'''
+
+def Next(p, next = []):
+    for i in xrange(len(p)):
+        if i == 0:
+            next.append(-1)
+            continue
+
+        if i == 1:
+            next.append(0)
+            continue
+        
+        j = next[i - 1]
+        while j >= 0:
+            if p[i - 1] != p[j]:
+                j =  next[j]
+            else:
+                next.append(j + 1)
+                break;
+
+        if j < 0:
+            #next[0] + 1
+            next.append(0)
+
+def match(s, p):
+    if not s or not p:
+        raise Exception("invalid input")
+    if len(s) < len(p):
+        return -1
+
+    next = []
+    Next(p, next)
+    print next
+    i, j = 0, 0
+
+    while i < len(s):
+        while j >=0 and j < len(p):
+            if s[i] == p[j]:
+                i += 1
+                j += 1
+            else:
+                j = next[j]
+        
+        if j == len(p):
+            return i - j
+        
+        if j == -1:
+            i += 1
+            j = 0
+    return -1
+    
+
+if __name__ == '__main__':
+    #返回首次匹配位置
+    print match("aaaaacaaaaacaaaaacaaaaac", "aaaaab")
+
+
+```
+
+## 复杂度
+
+`match("aaaaacaaaaacaaaaacaaaaac", "aaaaab")
+`就算是构造的复杂度比较高的情况，实际上 统计次数是`4*11`，记 `s` 为`len('aaaaac')` 那么统计为
+
+
+
