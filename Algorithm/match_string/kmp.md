@@ -1,4 +1,4 @@
-# KMP 算法
+$$$$$$$$\# KMP 算法
 
 记`len(s) = n, len(p) = m`, 其中`s`是源串，`p`是模式串，在`s`串中找模式串`p`出现的位置。
 
@@ -80,8 +80,6 @@ abab abb                j=4, j->Next[4] = 2
       abababb                i++, 逐个匹配
 ```
 
-
-
 ## 代码
 
 ```py
@@ -101,7 +99,7 @@ def Next(p, next = []):
         if i == 1:
             next.append(0)
             continue
-        
+
         j = next[i - 1]
         while j >= 0:
             if p[i - 1] != p[j]:
@@ -132,27 +130,22 @@ def match(s, p):
                 j += 1
             else:
                 j = next[j]
-        
+
         if j == len(p):
             return i - j
-        
+
         if j == -1:
             i += 1
             j = 0
     return -1
-    
+
 
 if __name__ == '__main__':
     #返回首次匹配位置
     print match("aaaaacaaaaacaaaaacaaaaac", "aaaaab")
-
-
 ```
 
 ## 复杂度
 
-`match("aaaaacaaaaacaaaaacaaaaac", "aaaaab")
-`就算是构造的复杂度比较高的情况，实际上 统计次数是`4*11`，记 `s` 为`len('aaaaac')` 那么统计为
-
-
+`match("aaaaacaaaaacaaaaacaaaaac", "aaaaab")`就算是构造的复杂度比较高的情况，实际上 统计次数是`4*11`，记 `s` 为`len('aaaaac')` 那么统计为$$x = y$$
 
