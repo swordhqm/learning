@@ -1,4 +1,4 @@
-$$$$$$$$\# KMP 算法
+# KMP 算法
 
 记`len(s) = n, len(p) = m`, 其中`s`是源串，`p`是模式串，在`s`串中找模式串`p`出现的位置。
 
@@ -147,5 +147,5 @@ if __name__ == '__main__':
 
 ## 复杂度
 
-`match("aaaaacaaaaacaaaaacaaaaac", "aaaaab")`就算是构造的复杂度比较高的情况，实际上 统计次数是`4*11`，记 `s` 为`len('aaaaac')` 那么统计为$$x = y$$
+`match("aaaaacaaaaacaaaaacaaaaac", "aaaaab")`就算是构造的复杂度比较高的情况，实际上 统计次数是`4*11`，记 `s` 为`len('aaaaac')` 那么统计为$$\frac{n}{s}*O (k), k=O（s)$$ 
 
