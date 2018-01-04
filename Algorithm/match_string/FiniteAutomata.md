@@ -2,13 +2,44 @@
 
 Pk 是 Pqa 的后缀
 
+```
+          a b a b a c a
+state 	0 1 2 3 4 5 6 7
+
+接受字符 'a', 'b', 'c'
+
+比如当前已经匹配到3 状态，也就是已经识别字串 "aba"
+
+下面状态转移
+...abaa...
+    a
+3 -----> 
+	k = min(len(p)+1, k + 2)
+	Pqa	abaa
+	k -= 1 -> 4
+	Pk	abab ----- abab 是不是 abaa的后缀
+	k -= 1 -> 3
+	Pk  aba ------ aba 是不是 abaa的后缀
+	k -= 1 -> 2
+	Pk	ab ------- ab 是不是 abaa的后缀
+	k -= 1 -> 1
+	Pk	a -------- a 是不是 abaa的后缀   【是的】
+             a
+	结果 3 -----> 1
+	
+    b
+3 ----->
+    c
+3 ----->
+```
+
+
+
 ![](/assets/match_string/FiniteAutomata1.bmp)
 
 ![](/assets/match_string/FiniteAutomata2.bmp)
 
 ![](/assets/match_string/FiniteAutomata3.jpg)
-
-
 
 ```py
 #-*-coding:utf-8-*-
@@ -31,20 +62,20 @@ class FiniteAutomata:
     '''
     def __init__(self, p):
         self.p = p
-        
+
         self.table = [] 
         for i in xrange(0, len(self.p) + 1):
             self.table.append({})
-        
+
         #alphas, this could be done within O(len(p))
         self.alphas = set(p)
-        
+
         self.compute_transition()
 
 
     def compute_transition(self):
         m = len(self.p)
-        
+
         for i in xrange(0, m + 1):
             for ch in self.alphas:
                 k = min(m + 1, i + 2)
@@ -60,7 +91,7 @@ class FiniteAutomata:
                     if self.isSuffix(Pk, Pq_ch):
                        self.table[i].update({ch: k})
                        break;
-    
+
     def isSuffix(self, suffix, source):
         assert(len(source) >= len(suffix))
         j = len(source)
@@ -86,7 +117,6 @@ class FiniteAutomata:
 
 f = FiniteAutomata("ababaca");
 print f.searchIn("aababacbababaca")
-
 ```
 
 
