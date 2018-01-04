@@ -296,8 +296,10 @@ if __name__ == "__main__":
     #s = SuffixTree("mississi$")
     main(sys.argv)
 ```
+下面是 mississi$ 的构建过程
 
 ![](/assets/suffix_tree/suffix_tree_ukkonen.svg)
+
 ![](/assets/suffix_tree/suffix_tree_ukkonen1.svg)
 ![](/assets/suffix_tree/suffix_tree_ukkonen2.svg)
 ![](/assets/suffix_tree/suffix_tree_ukkonen3.svg)
