@@ -41,7 +41,7 @@ class CalHash:
         # 若 (a + b + c) %d = t
         # (b + c + e) % d = ((t - a) + e) %d
     '''
-    
+
     #Source('abcad', 3)
     class Source:
         def __init__(self, s, wsize):
@@ -51,7 +51,7 @@ class CalHash:
             self.wsize = wsize
 
             assert(self.wsize <= len(self.s))
-              
+
     '''
         q: factor
         d: 进制
@@ -80,7 +80,7 @@ class CalHash:
 
             self.source.lastHash = t
             self.source.lastIndex = 0
-            
+
             return t
         else:
             index = self.source.lastIndex + 1
@@ -88,14 +88,14 @@ class CalHash:
             if len(self.source.s) - index >= self.source.wsize:
                 f_ch = self.source.s[self.source.lastIndex]
                 l_ch = self.source.s[index + self.source.wsize - 1]
-                
+
                 t = self.source.lastHash
 
-		t = (self.d * (t - ord(f_ch)*self.h) + ord(l_ch)) % self.q
-		# We might get negative values of t, converting it to
-		# positive
-		if t < 0:
-		    t = t + self.q
+        t = (self.d * (t - ord(f_ch)*self.h) + ord(l_ch)) % self.q
+        # We might get negative values of t, converting it to
+        # positive
+        if t < 0:
+            t = t + self.q
 
                 self.source.lastIndex = index
                 self.source.lastHash = t
@@ -126,7 +126,7 @@ def ranbin_karp1(s, p):
                     return i
             except UnboundLocalError:
                 return 0
-    
+
     return -1
 
 
@@ -136,7 +136,6 @@ s = "asldkjfskaldf"
 #s_calHash = CalHash(s_source, 101)
 #print s_calHash.calNextHash()
 print ranbin_karp1("ffzzz", "fla")
-
 ```
 
 
