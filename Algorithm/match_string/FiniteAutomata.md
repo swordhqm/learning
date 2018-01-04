@@ -3,8 +3,8 @@
 Pk 是 Pqa 的后缀
 
 ```
-          a b a b a c a
-state 	0 1 2 3 4 5 6 7
+            a b a b a c a
+state     0 1 2 3 4 5 6 7
 
 接受字符 'a', 'b', 'c'
 
@@ -14,26 +14,24 @@ state 	0 1 2 3 4 5 6 7
 ...abaa...
     a
 3 -----> 
-	k = min(len(p)+1, k + 2)
-	Pqa	abaa
-	k -= 1 -> 4
-	Pk	abab ----- abab 是不是 abaa的后缀
-	k -= 1 -> 3
-	Pk  aba ------ aba 是不是 abaa的后缀
-	k -= 1 -> 2
-	Pk	ab ------- ab 是不是 abaa的后缀
-	k -= 1 -> 1
-	Pk	a -------- a 是不是 abaa的后缀   【是的】
+    k = min(len(p)+1, k + 2)
+    Pqa    abaa
+    k -= 1 -> 4
+    Pk    abab ----- abab 是不是 abaa的后缀
+    k -= 1 -> 3
+    Pk  aba ------ aba 是不是 abaa的后缀
+    k -= 1 -> 2
+    Pk    ab ------- ab 是不是 abaa的后缀
+    k -= 1 -> 1
+    Pk    a -------- a 是不是 abaa的后缀   【是的】
              a
-	结果 3 -----> 1
-	
+    结果 3 -----> 1
+
     b
 3 ----->
     c
 3 ----->
 ```
-
-
 
 ![](/assets/match_string/FiniteAutomata1.bmp)
 
