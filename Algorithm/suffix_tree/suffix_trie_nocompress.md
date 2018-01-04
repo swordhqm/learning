@@ -94,5 +94,7 @@ if __name__ == "__main__":
     main(sys.argv)
 ```
 
+下面是描述 "mississi$" 的非压缩后缀树
 
+![](/assets/suffix_tree/suffix_trie_nocompress.svg)
 
