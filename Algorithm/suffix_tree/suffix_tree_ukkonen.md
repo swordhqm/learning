@@ -301,12 +301,19 @@ if __name__ == "__main__":
 ![](/assets/suffix_tree/suffix_tree_ukkonen.svg)
 
 ![](/assets/suffix_tree/suffix_tree_ukkonen1.svg)
+
 ![](/assets/suffix_tree/suffix_tree_ukkonen2.svg)
+
 ![](/assets/suffix_tree/suffix_tree_ukkonen3.svg)
+
 ![](/assets/suffix_tree/suffix_tree_ukkonen4.svg)
+
 ![](/assets/suffix_tree/suffix_tree_ukkonen5.svg)
+
 ![](/assets/suffix_tree/suffix_tree_ukkonen6.svg)
+
 ![](/assets/suffix_tree/suffix_tree_ukkonen7.svg)
+
 ![](/assets/suffix_tree/suffix_tree_ukkonen8.svg)
 
 
