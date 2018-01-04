@@ -7,32 +7,32 @@
 ##########################################################################
 #init:
 #root (
-#	None,
-#	{
-#		'a': (
-#			'abcabe',
-#			{},
-#		)
-#	}
+#    None,
+#    {
+#        'a': (
+#            'abcabe',
+#            {},
+#        )
+#    }
 #)
 #
 #step1
 #root (
-#	None,
-#	{
-#		'a': (
-#			'abcabe',
-#			{},
-#		),
-#		'b': (
-#			'bcabe',
-#			{},
-#		),
-#		'c': (
-#			'cabe',
-#			{},
-#		)
-#	}
+#    None,
+#    {
+#        'a': (
+#            'abcabe',
+#            {},
+#        ),
+#        'b': (
+#            'bcabe',
+#            {},
+#        ),
+#        'c': (
+#            'cabe',
+#            {},
+#        )
+#    }
 #)
 #
 #
@@ -45,30 +45,30 @@
 #mid.out[c] = 'cabe$'[2:]
 #这个时候ab和abcabe边一致
 #root (
-#	None,
-#	{
-#		'a': (
-#			'ab',
-#			{
-#				'e':(
-#					'e$',
-#					{}
-#				),
-#				'c':(
-#					'cabe$',
-#					{}
-#				)
-#			},
-#		),
-#		'b': (
-#			'bcabe',
-#			{},
-#		),
-#		'c': (
-#			'cabe',
-#			{},
-#		)
-#	}
+#    None,
+#    {
+#        'a': (
+#            'ab',
+#            {
+#                'e':(
+#                    'e$',
+#                    {}
+#                ),
+#                'c':(
+#                    'cabe$',
+#                    {}
+#                )
+#            },
+#        ),
+#        'b': (
+#            'bcabe',
+#            {},
+#        ),
+#        'c': (
+#            'cabe',
+#            {},
+#        )
+#    }
 #)
 ##########################################################################
 import sys
@@ -177,7 +177,7 @@ class SuffixTree(object):
             index = self.dfsTraversal(v, nodes, edges, index)
 
         return index
-        
+
 
     def drawTree(self):
         nodes = []
@@ -211,8 +211,7 @@ if __name__ == "__main__":
     #s = SuffixTree("ueiouu$")     
     #s = SuffixTree("mississi$")
     main(sys.argv)
-
 ```
 
-
+![](/assets/suffix_tree/suffix_tree_compress.svg)
 
