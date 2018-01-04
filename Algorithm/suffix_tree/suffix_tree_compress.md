@@ -212,6 +212,7 @@ if __name__ == "__main__":
     #s = SuffixTree("mississi$")
     main(sys.argv)
 ```
+下面是mississi$ 的压缩后缀树图
 
 ![](/assets/suffix_tree/suffix_tree_compress.svg)
 
