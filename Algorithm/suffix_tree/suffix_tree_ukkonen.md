@@ -58,14 +58,14 @@ class SuffixTree:
         self.end = SuffixTree.End(0)
         self.remainingSuffixCount = 0
         self.__createSuffixTree()
-    
+
     def __selectActiveChild(self):
         activeNode = self.active[0]
         activeEdge = self.active[1]
         activeLength = self.active[2]
         node = activeNode.children.get(self.p_in[activeEdge])
         return node
-    
+
     def __nextChar(self, i):
         node = self.__selectActiveChild()
 
@@ -105,7 +105,7 @@ class SuffixTree:
             self.active[1] = node.children[self.p_in[i]].start
         else:
             self.active[2] += 1
- 
+
     def __startPhase(self, i):
         lastCreatedInternalNode = None
         self.end.end += 1
@@ -173,7 +173,7 @@ class SuffixTree:
                             self.active[2] -= 1
 
                         self.remainingSuffixCount -= 1
-                    
+
                 except EndOfPathException, e:
                     #this happens when we are looking for new character from end of current path edge. Here we already have internal node so
                     #we don't have to create new internal node. Just create a leaf node from here and move to suffix new link.
@@ -183,19 +183,19 @@ class SuffixTree:
                     self.positiveIndex += 1
                     if lastCreatedInternalNode:
                         lastCreatedInternalNode.suffixLink = node
-                    
+
                     lastCreatedInternalNode = node
                     #if active node is not root then follow suffix link
                     if self.active[0] != self.root:
                         self.active[0] = self.active[0].suffixLink
-                    
+
                     #if active node is root then increase active index by one and decrease active length by 1
                     else:
                         self.active[1] += 1
                         self.active[2] -= 1
 
                     self.remainingSuffixCount -= 1
-                    
+
     def __setIndexUsingDfs(self, node, val, length):
         if not node:
             return
@@ -235,7 +235,7 @@ class SuffixTree:
     def __dfsTraversal(self, node, nodes=[], edges=[]):
         if not node:
             return
-        
+
         def n(v):
             return self.p_in[v.start:v.end.end] + '|' + str(v.start) + '-' + str(v.end.end) + '|' + str(v.index)
 
@@ -262,7 +262,7 @@ class SuffixTree:
                 ),{
                     'color': 'red'
                 })
-                
+
                 if edge not in edges:
                     edges.append(edge)
 
@@ -271,12 +271,12 @@ class SuffixTree:
 
     def __createSuffixTree(self):
         root = self.root
-        
+
         for i in range(0, len(self.p_in)):
             self.__startPhase(i)
             print self.p_in[i], self.active[1], self.active[2], self.remainingSuffixCount, self.active[0]
             self.__drawTree(i)
-        
+
         #self.__setIndexUsingDfs(root, 0, len(self.p_in))
         #self.__drawTree()
         print "done"
@@ -295,8 +295,32 @@ if __name__ == "__main__":
     #s = SuffixTree("ueiouu$")     
     #s = SuffixTree("mississi$")
     main(sys.argv)
-
 ```
+
+![](/assets/suffix_tree/suffix_tree_ukkonen.svg)
+![](/assets/suffix_tree/suffix_tree_ukkonen1.svg)
+![](/assets/suffix_tree/suffix_tree_ukkonen2.svg)
+![](/assets/suffix_tree/suffix_tree_ukkonen3.svg)
+![](/assets/suffix_tree/suffix_tree_ukkonen4.svg)
+![](/assets/suffix_tree/suffix_tree_ukkonen5.svg)
+![](/assets/suffix_tree/suffix_tree_ukkonen6.svg)
+![](/assets/suffix_tree/suffix_tree_ukkonen7.svg)
+![](/assets/suffix_tree/suffix_tree_ukkonen8.svg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
