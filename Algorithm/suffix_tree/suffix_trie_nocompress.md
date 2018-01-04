@@ -1,4 +1,4 @@
-#suffix trie no compress
+# suffix trie no compress
 
 ```
 #!/bin/python
@@ -44,12 +44,12 @@ class SuffixTrie(object):
         """ Return true iff s is a suffix of t """
         node = self.followPath(s)
         return node is not None and '$' in node
-    
+
     def __dfsTraversal(self, node, nodes, edges, index = 0):
         """ get nodes & edges"""
         if node == self.root:
             nodes.append((str(index), {'label': 'root'}))
-    
+
         parent = str(index)
         for k,v in node.items():
             index += 1
@@ -59,7 +59,7 @@ class SuffixTrie(object):
             index = self.__dfsTraversal(v, nodes, edges, index)
 
         return index
-    
+
     def drawTree(self):
         nodes = []
         edges = []
@@ -92,7 +92,6 @@ if __name__ == "__main__":
     #s = SuffixTree("ueiouu$")     
     #s = SuffixTree("mississi$")
     main(sys.argv)
-
 ```
 
 
