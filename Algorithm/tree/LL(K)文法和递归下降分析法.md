@@ -26,8 +26,11 @@ https://www.cnblogs.com/aademeng/articles/6918477.html
 
 -> LL（1）文法
 -> 递归下降分析
-```
 
+递归下降分析可以顺带构建语法树 https://www.zhihu.com/question/25097763
+
+
+```
 
 ![](/assets/tree/如何判断一个文法是LL%28k%29文法/幻灯片1.jpg)
 
