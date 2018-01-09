@@ -84,5 +84,10 @@ PATH="~/Android/Sdk/tools:~/Android/Sdk/platform-tools:${PATH}"
 export PATH
 ```
 
+```
+react-native init MyPJ
+
+```
+
 
 
