@@ -63,5 +63,28 @@ source ~/.bash_profile
 可以使用echo $ANDROID_HOME检查此变量是否已正确设置。
 ```
 
+```
+安装watchman
+git clone https://github.com/facebook/watchman.git
+cd watchman
+git checkout v4.5.0  # 这是本文发布时的最新版本，请自行选择更新的版本
+./autogen.sh
+./configure
+make
+sudo make install
+```
+
+```
+将Android SDK的Tools目录添加到PATH变量中#
+你可以把Android SDK的tools和platform-tools目录添加到PATH变量中，以便在终端中运行一些Android工具，
+例如android avd或是adb logcat等。
+
+在~/.bashrc或是~/.bash_profile文件中添加：
+
+# 你的具体路径可能有所不同，请自行确认。
+PATH="~/Android/Sdk/tools:~/Android/Sdk/platform-tools:${PATH}"
+export PATH
+```
+
 
 
