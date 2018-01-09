@@ -34,9 +34,7 @@ yarn config set disturl https://npm.taobao.org/dist --global
 ```
 
 ```
-react-native-cli
-
-这个建议加入package.json 作为依赖包
+yarn global add react-native-cli
 ```
 
 ```
