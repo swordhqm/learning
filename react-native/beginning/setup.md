@@ -39,5 +39,15 @@ react-native-cli
 这个建议加入package.json 作为依赖包
 ```
 
+```
+安装jdk，jre
+安装android studio，其实是为了sdk 和 模拟器
+
+在SDK Platforms窗口中，选择Show Package Details，
+然后在Android 6.0 (Marshmallow)中勾选Google APIs、Android SDK Platform 23、
+Intel x86 Atom System Image、Intel x86 Atom_64 System Image
+以及Google APIs Intel x86 Atom_64 System Image
+```
+
 
 
