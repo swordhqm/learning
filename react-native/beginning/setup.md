@@ -26,9 +26,12 @@ info yarn config
 info npm config
 {}
 
+上面的registry 就是yarn 镜像源
+通过
+yarn config set registry https://registry.npm.taobao.org --global
+yarn config set disturl https://npm.taobao.org/dist --global
+可以改为淘宝镜像源
 ```
-
-
 
 
 
