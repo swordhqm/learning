@@ -49,5 +49,19 @@ Intel x86 Atom System Image、Intel x86 Atom_64 System Image
 以及Google APIs Intel x86 Atom_64 System Image
 ```
 
+```
+ANDROID_HOME环境变量
+确保ANDROID_HOME环境变量正确地指向了你安装的Android SDK的路径。
+
+具体的做法是把下面的命令加入到~/.bashrc、~/.bash_profile文件中。如果你使用的是其他的shell，则选择对应的配置文件:
+
+# 如果你不是通过Android Studio安装的sdk，则其路径可能不同，请自行确定清楚。
+export ANDROID_HOME=~/Library/Android/sdk
+然后使用下列命令使其立即生效（否则重启后才生效）：
+
+source ~/.bash_profile
+可以使用echo $ANDROID_HOME检查此变量是否已正确设置。
+```
+
 
 
