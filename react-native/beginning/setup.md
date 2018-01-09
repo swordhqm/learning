@@ -33,5 +33,11 @@ yarn config set disturl https://npm.taobao.org/dist --global
 可以改为淘宝镜像源
 ```
 
+```
+react-native-cli
+
+这个建议加入package.json 作为依赖包
+```
+
 
 
