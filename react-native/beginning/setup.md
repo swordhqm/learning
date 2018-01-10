@@ -86,7 +86,30 @@ export PATH
 
 ```
 react-native init MyPJ
+```
 
+# 个人经验
+
+```
+1. 当前环境 windows(host), vbox linux fedora (vboxlinux)
+2. 想用android 模拟器
+3. 直接在vboxlinux 启动模拟器 是不可行的，具体和虚拟化有关
+4. 想在windows上再开个Hyper-V 用作android 虚拟机，但是发现 这样就和 vbox 冲突
+5. vbox 创建虚拟机 用作 android 奇卡无比
+6. genymotion 很顺利创建android 虚拟机并启动。但是公司环境下，android 虚拟机无法  
+ 境下的网络配置有关系，可能路由端用了vpn 之类或者规则之类。
+7. 测试react native, 出现常见错误。
+8. 添加
+"scripts": {
+    "android": "react-native run-android",
+    "android_linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output 
+    android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
+  }
+9. 发现运行时正常，但是hot-reload，也就是双击R，app无法通过dev server去热加载。
+也就是每次改动都需要重新run，然后push app才能看到效果。
+10. 测试很多次，发现只有在主机host端才可以执行adb reverse tcp:8081 tcp:8081.
+11. 在windows 下搭建 java，nodejs，npm，yarn，android sdk。发现可以正常实现热加载了。
+12. 编辑器使用的是vscode
 ```
 
 
