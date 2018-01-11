@@ -2,8 +2,6 @@
 
 安装 [http://blog.csdn.net/qq\_33200967/article/details/71950921](http://blog.csdn.net/qq_33200967/article/details/71950921)
 
-
-
 ```
 安装Linux，在PowerShell里输入lxrun /install
 
@@ -18,7 +16,8 @@ https://aka.ms/uowterms
 键入“y”继续: y
 正在从 Windows 应用商店下载... 1%
 
-
+备份 powershell
+xcopy $env:localappdata\lxss $env:localappdata\lxss.bak /E
 ```
 
 
