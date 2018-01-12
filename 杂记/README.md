@@ -141,6 +141,9 @@ chrome --headless --disable-gpu --screenshot --window-size=1280,1696 https://www
 chrome --headless --disable-gpu --screenshot --window-size=412,732 https://www.baidu.com
 把headless Chrome作为一个自动截图工具  -- 整个页面截图
 
+PS： 额外思想 利用xvfb来实现伪headless browser
+https://segmentfault.com/a/1190000009081206
+http://tobyho.com/2015/01/09/headless-browser-testing-xvfb/
 
 ###### 突破爬虫
 #http://blog.csdn.net/offbye/article/details/52235139
