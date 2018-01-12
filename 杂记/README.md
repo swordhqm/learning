@@ -57,6 +57,11 @@ LINUX ENVIRONMENT
 pip install selenium
 
 ###### headless chrome 要求 version > 59
+#### headless chrome 能干啥
+https://www.jianshu.com/p/aec4b1216011
+
+
+
 #### 安装chrome
 1. Change to root user.
 sudo -i 或者 su -
@@ -115,6 +120,27 @@ WaylandEnable=false
 
 #https://www.jianshu.com/p/aec4b1216011
 #http://blog.csdn.net/offbye/article/details/52235139
+
+#### 测试
+.bash_profile
+PATH=/opt/google/chrome/:$PATH
+
+执行 chrome
+另外如果是root 可能需要执行 chrome --no-sandbox
+
+测试headless 特性
+[kevin@localhost ~]$ chrome --headless --disable-gpu --remote-debugging-port=9222 https://www.baidu.com
+
+DevTools listening on ws://127.0.0.1:9222/devtools/browser/2fc1cc4e-59f0-4009-8fb0-45b92ffc67c1
+
+chrome --headless --remote-debugging-port=9222 https://www.baidu.com
+chrome --headless --disable-gpu --dump-dom https://www.baidu.com
+chrome --headless --disable-gpu --print-to-pdf https://www.baidu.com
+chrome --headless --disable-gpu --screenshot https://www.baidu.com
+chrome --headless --disable-gpu --screenshot --window-size=1280,1696 https://www.baidu.com
+chrome --headless --disable-gpu --screenshot --window-size=412,732 https://www.baidu.com
+把headless Chrome作为一个自动截图工具  -- 整个页面截图
+
 
 ###### 突破爬虫
 #http://blog.csdn.net/offbye/article/details/52235139
