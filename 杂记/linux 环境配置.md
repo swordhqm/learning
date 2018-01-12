@@ -1,4 +1,4 @@
-# .bash\__profile 或者 .bash_rc
+# .bash\_\_profile 或者 .bash\_rc
 
 ```
 .bash_profile
@@ -20,15 +20,16 @@ export ANDROID_HOME=/home/kevin/android/android_tool
 
 PATH=$ANDROID_HOME/platform-tools/:$PATH
 export PATH=$PATH
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64/mysql
 
+# https://www.cnblogs.com/trying/archive/2013/06/07/3123577.html
+# 解决问题，比如libmysqlclient.so 找不到，添加共享库路径
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64/mysql
 ```
 
 ```
 .bashrc
 登陆时加载一次
 ====================================================================
-
 ```
 
 
