@@ -27,7 +27,6 @@ export PATH=$PATH
 # rpm -ql xx, 可以查看xx里含有的共享库
 # 解决问题，比如libmysqlclient.so 找不到，添加共享库路径
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64/mysql
-
 ```
 
 ```
