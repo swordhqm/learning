@@ -9,8 +9,6 @@ http 代理 参见gost
 
 [https://imququ.com/post/web-proxy.html](https://imququ.com/post/web-proxy.html)
 
-
-
 ---
 
 ```
@@ -48,10 +46,12 @@ root@PlayfulAliceblue-VM:/etc/v2ray# openssl x509 -req -days 3650 -in v2ray.csr 
 Signature ok
 subject=/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd
 Getting Private key
+```
+---
 
 ```
 
-
+```
 
 
 
