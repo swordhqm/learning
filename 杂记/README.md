@@ -50,14 +50,75 @@ Getting Private key
 ---
 
 ```
-#Selenium
+LINUX ENVIRONMENT
 
-#headless chrome
+###### Selenium自动化
+
+pip install selenium
+
+###### headless chrome 要求 version > 59
+#### 安装chrome
+1. Change to root user.
+sudo -i 或者 su -
+2. Enable Google YUM repository
+Note: Google Chrome Linux version doesn’t get any 32-bit (x86) updates and 32-bit repo is also removed. If you have 32-bit version installed, then you can use it, but you can’t get security updates or other updates anymore.
+
+Run following command (copy & paste all lines to console) to create /etc/yum.repos.d/google-chrome.repo file:
+
+
+cat << EOF > /etc/yum.repos.d/google-chrome.repo
+[google-chrome]
+name=google-chrome - \$basearch
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/\$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+EOF
+3. Install Google Chrome with YUM
+3.1 Install Google Chrome Stable Version
+
+## Install Google Chrome Stable version ##
+## Fedora 27/26/25/24 ##
+dnf install google-chrome-stable
+
+## CentOS/RHEL 7.4 ##
+yum install google-chrome-stable
+3.2 Install Google Chrome Beta Version
+
+## Install Google Chrome Beta version ##
+## Fedora 27/26/25/24 ##
+dnf install google-chrome-beta
+
+## CentOS/RHEL 7.4 ##
+yum install google-chrome-beta
+3.3 Install Google Chrome Unstable Version
+
+## Install Google Chrome Unstable version ##
+## Fedora 27/26/25/24 ##
+dnf install google-chrome-unstable
+
+## CentOS/RHEL 7.4 ##
+yum install google-chrome-unstable
+4. Note for Fedora 27/26/25 Wayland users
+If you have problems, then fallback to Xorg with modifying /etc/gdm/custom.conf file:
+
+
+# GDM configuration storage
+
+[daemon]
+# Uncomment the line below to force the login screen to use Xorg
+WaylandEnable=false
+
+[security]
+...
+
+
 #https://www.jianshu.com/p/aec4b1216011
 #http://blog.csdn.net/offbye/article/details/52235139
 
-#突破爬虫
+###### 突破爬虫
 #http://blog.csdn.net/offbye/article/details/52235139
+
 ```
 
 
