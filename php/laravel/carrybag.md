@@ -20,4 +20,11 @@ Migrated:  2014_10_12_000000_create_users_table
 Migrating: 2014_10_12_100000_create_password_resets_table
 Migrated:  2014_10_12_100000_create_password_resets_table
 
+# 构建登陆界面
+
 ```
+[kevin@localhost carrybag]$ php artisan make:auth
+Authentication scaffolding generated successfully.
+```
+
+
