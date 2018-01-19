@@ -12,7 +12,7 @@
 
 利用laravel 自带的migration 初始化数据表
 
-``` bash
+```bash
 [kevin@localhost carrybag]$ php artisan migrate
 Migration table created successfully.
 Migrating: 2014_10_12_000000_create_users_table
@@ -21,10 +21,14 @@ Migrating: 2014_10_12_100000_create_password_resets_table
 Migrated:  2014_10_12_100000_create_password_resets_table
 
 # 构建登陆界面
+```
 
 ```
 [kevin@localhost carrybag]$ php artisan make:auth
 Authentication scaffolding generated successfully.
 ```
+
+
+
 
 
