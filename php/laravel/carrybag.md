@@ -46,6 +46,19 @@ Authentication scaffolding generated successfully.
 |        | POST     | register               |                  | App\Http\Controllers\Auth\RegisterController@register                  | web,guest    |
 +--------+----------+------------------------+------------------+------------------------------------------------------------------------+--------------+
 
+添加mail 配置
+https://laravel.com/docs/5.5/mail
+
+在.env文件中配置
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.163.com
+MAIL_PORT=25
+MAIL_USERNAME=swordhqm
+MAIL_PASSWORD=******
+MAIL_ENCRYPTION=tls
+
+至此，可以实现 登陆，以及密码重置
 ```
 
 # 
