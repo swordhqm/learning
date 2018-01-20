@@ -6,6 +6,10 @@
 
 `laravel new carrybag`
 
+# Stage1
+
+> 搭建laravel默认的登陆界面
+
 创建数据表
 
 `create database carrybag character set utf8;`
