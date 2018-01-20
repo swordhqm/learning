@@ -6,9 +6,7 @@
 
 `laravel new carrybag`
 
-# Stage1
-
-> 搭建laravel默认的登陆界面
+# 搭建laravel默认的登陆界面
 
 创建数据表
 
@@ -65,7 +63,13 @@ MAIL_ENCRYPTION=tls
 至此，可以实现 登陆，以及密码重置
 ```
 
-# 
+#  整合 laravel-wechat
+
+https://github.com/overtrue/laravel-wechat
+
+`[kevin@localhost carrybag]$ composer require "overtrue/laravel-wechat:~4.0"`
+
+
 
 
 
