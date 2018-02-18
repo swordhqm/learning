@@ -69,6 +69,13 @@ https://github.com/overtrue/laravel-wechat
 
 `[kevin@localhost carrybag]$ composer require "overtrue/laravel-wechat:~4.0"`
 
+```
+[kevin@localhost carrybag]$ php artisan vendor:publish --provider="Overtrue\LaravelWeChat\ServiceProvider"
+Copied File [/vendor/overtrue/laravel-wechat/src/config.php] To [/config/wechat.php]
+Publishing complete.
+
+```
+
 
 
 
