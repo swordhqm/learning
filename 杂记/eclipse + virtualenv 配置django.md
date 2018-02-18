@@ -34,16 +34,28 @@ python manage.py runserver 0.0.0.0:8000
 
 # 配置eclipse + virtualenv + django
 
-1. 导入oscar\_shop
-   这部分比较麻烦，需要先创建一个空的project
-2. 配置interpeter
+* 导入oscar\_shop
 
+这部分比较麻烦，需要先创建一个空的project
 
+![](/assets/img/01b6f28f-68eb-4241-8a9a-9372c2d810dc-1.png)
 
+然后import from File System
 
+选择需要的文件夹，import到project
+
+![](/assets/img/01b6f28f-68eb-4241-8a9a-9372c2d810dc-2.png)
+
+* 配置interpeter
+
+这里需要找到virtualenv 环境下的python作为编译器  
+![](/assets/img/01b6f28f-68eb-4241-8a9a-9372c2d810dc-3.png)
+
+* 运行环境配置
+
+![](/assets/img/01b6f28f-68eb-4241-8a9a-9372c2d810dc-4.png)![](/assets/img/01b6f28f-68eb-4241-8a9a-9372c2d810dc-5.png)![](/assets/img/01b6f28f-68eb-4241-8a9a-9372c2d810dc-6.png)
 
 # TAG
+
 01b6f28f-68eb-4241-8a9a-9372c2d810dc
-
-
 
