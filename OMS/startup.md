@@ -26,3 +26,4 @@ DATABASE_ROUTERS = ['main_entry.database_routes.routers.AuthRouter']
 ```
 corsheaders
 ```
+
