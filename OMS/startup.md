@@ -2,7 +2,8 @@
 
 LOGIN_REDIRECT_URL = '/accounts/profile/'
 
-第一步实现：
+第一步实现：指定用户表 访问FBA_Recall 用户表
+
 ```
 DATABASES = {
     'default': {
