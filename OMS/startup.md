@@ -27,3 +27,7 @@ DATABASE_ROUTERS = ['main_entry.database_routes.routers.AuthRouter']
 corsheaders
 ```
 
+第三步：
+将model 放在不同的文件下
+https://williamsbdev.com/posts/django-models-directory/
+
