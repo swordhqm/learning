@@ -22,3 +22,7 @@ DATABASE_ROUTERS = ['main_entry.database_routes.routers.AuthRouter']
 ```
 
 第二步实现：
+跨域
+```
+corsheaders
+```
