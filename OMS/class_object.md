@@ -26,3 +26,5 @@ dir(X)
 
 
 https://eli.thegreenplace.net/2011/08/14/python-metaclasses-by-example
+
+http://blog.jobbole.com/21351/
