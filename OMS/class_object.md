@@ -23,3 +23,6 @@ class X(object):
 dir(X)
 # Exception: No!
 ```
+
+
+https://eli.thegreenplace.net/2011/08/14/python-metaclasses-by-example
