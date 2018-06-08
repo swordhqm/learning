@@ -1,5 +1,4 @@
-# Summary
+# Table of contents
 
 * [Introduction](README.md)
-* [jsbook](jsbook/js.md)
 
