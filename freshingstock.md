@@ -14,12 +14,7 @@ fsv1 引入本地fedex 作为amazon 第三方派送
 ```
 
 ```text
-git branch 查看当前是什么分支；（比如是master）
-git status 查看 是否包含上游分支信息，如果没有 这么设置或取消：、
-git branch --set-upstream-to=origin/master master
-git branch --unset-upstream master
-
-首先 git fetch 更新
+git branch 查看当前是什么分支；（比如是master）git status 查看 是否包含上游分支信息，如果没有 这么设置或取消：、git branch --set-upstream-to=origin/master mastergit branch --unset-upstream master首先 git fetch 更新
 ```
 
 {% hint style="info" %}
