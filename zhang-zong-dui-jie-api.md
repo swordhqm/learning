@@ -214,3 +214,53 @@ update\_removal\_shipment\_detail
 }
 ```
 
+{% api-method method="post" host="http://www.freshingstock.com/searemoval/sea\_removal " path=" " %}
+{% api-method-summary %}
+update\_package\_label
+{% endapi-method-summary %}
+
+{% api-method-description %}
+提供按箱 提供package label
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="param" type="string" required=true %}
+转换为jsonstr   
+参加下面【param】
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="token" type="string" required=true %}
+{token}
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="pk" type="string" required=true %}
+{pk}
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+```javascript
+{
+"why": "api_update_package_label",
+"identity-barcode": "1Zxxxx1",
+"PdfDocument": "Data for printing PDF documents, in the form of a Base64-encoded string.  PackageLabel_Letter_2",
+"PdfType": "PackageLabel_Letter_2 或者 PackageLabel_4x6_2_page"
+} 
+```
+
