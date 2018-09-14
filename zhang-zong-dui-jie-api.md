@@ -256,11 +256,21 @@ update\_package\_label
 {% endapi-method %}
 
 ```javascript
+上传label
+
 {
-"why": "api_update_package_label",
-"identity-barcode": "1Zxxxx1",
-"PdfDocument": "Data for printing PDF documents, in the form of a Base64-encoded string.  PackageLabel_Letter_2",
-"PdfType": "PackageLabel_Letter_2 或者 PackageLabel_4x6_2_page"
-} 
+    "identity-barcode-list": ["1Zxxxx1", "1Zxxxx2", "1Zxxxx3", "1Zxxxx4", "1Zxxxx5"],
+    "ship-type": "custom_ship_out",
+    "PdfDocument": "文档的base64编码",
+    "PdfType": "PackageLabel_4x6_2_page",
+    "action": "update_or_create",
+    "why": "api_update_package_label"
+}
+
+正常会返回 shipment id
+
+
+
+
 ```
 
