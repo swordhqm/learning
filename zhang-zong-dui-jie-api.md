@@ -116,6 +116,51 @@ identity 表示已经创建了一个标志位6KA1T 的海运批次
 
 {% api-method method="post" host="http://www.freshingstock.com/searemoval/sea\_removal" path=" " %}
 {% api-method-summary %}
+delete\_removal\_shipment
+{% endapi-method-summary %}
+
+{% api-method-description %}
+删除在创建状态的removal shipment
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="param" type="string" required=true %}
+转换为json string  
+{   
+"why": "api\_delete\_removal\_shipment",   
+"ship-type": "custom\_ship\_out",  
+ "identity": "6KA1I"  
+ }
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="token" type="string" required=true %}
+{token}
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="pk" type="string" required=true %}
+{pk}
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="http://www.freshingstock.com/searemoval/sea\_removal" path=" " %}
+{% api-method-summary %}
 update\_removal\_shipment\_detail
 {% endapi-method-summary %}
 
@@ -256,6 +301,7 @@ update\_package\_label
 {% endapi-method %}
 
 ```javascript
+==========================================================================
 上传label
 
 {
@@ -269,8 +315,20 @@ update\_package\_label
 
 正常会返回 shipment id
 
-
+============================================================================
+如果需要修改 指定shipment id 的内容，需要指定shipment-id
+{
+    "identity-barcode-list": ["1Zxxxx1", "1Zxxxx2", "1Zxxxx3", "1Zxxxx4", "1Zxxxx5"],
+    "ship-type": "custom_ship_out",
+    "PdfDocument": "文档的base64编码",
+    "PdfType": "PackageLabel_4x6_2_page",
+    "action": "update_or_create",
+    "why": "api_update_package_label",
+    "shipment-id": "6",
+}
 
 
 ```
+
+![](.gitbook/assets/image%20%286%29.png)
 
