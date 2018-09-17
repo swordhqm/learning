@@ -348,3 +348,94 @@ update\_package\_label
 
 ![](.gitbook/assets/image%20%286%29.png)
 
+{% api-method method="post" host="http://www.freshingstock.com/searemoval/sea\_removal" path=" " %}
+{% api-method-summary %}
+obtain\_inbound\_status
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="param" type="string" required=true %}
+转换为json string  
+参考下面**\[param\]**
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="token" type="string" required=true %}
+{token}
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="pk" type="string" required=true %}
+{pk}
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+```javascript
+#param 格式
+{
+    "action": "by_removal_shipment",
+    "ship-type": "custom_ship_out",
+    "why": "api_obtain_inbound_status",
+    "identity": "LJYA9"
+}
+
+
+目前status 初步定义为
+created， 上传尚未收到
+received， 收到货未入库
+audit，    已入库
+exception - has missing or damanage    入库异常 - 严重受损或未收到货
+gone，错误的信息
+
+#response 响应例子
+{
+    "request_param": {
+        "action": "by_removal_shipment",
+        "ship-type": "custom_ship_out",
+        "why": "api_obtain_inbound_status",
+        "identity": "LJYA9"
+    },
+    "details": [{
+            "status": "created",
+            "box_qty": 1,
+            "identity-barcode": "1Zxxxx1",
+            "last_modify_time": "2018-09-17 19:10:12+00:00"
+        }, {
+            "status": "created",
+            "box_qty": 1,
+            "identity-barcode": "1Zxxxx2",
+            "last_modify_time": "2018-09-17 19:10:14+00:00"
+        }, {
+            "status": "created",
+            "box_qty": 1,
+            "identity-barcode": "1Zxxxx3",
+            "last_modify_time": "2018-09-17 19:10:15+00:00"
+        }, {
+            "status": "created",
+            "box_qty": 1,
+            "identity-barcode": "1Zxxxx4",
+            "last_modify_time": "2018-09-17 19:10:17+00:00"
+        }],
+    "identity": "LJYA9"
+}
+```
+
