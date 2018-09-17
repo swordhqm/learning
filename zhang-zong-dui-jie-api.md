@@ -305,26 +305,42 @@ update\_package\_label
 上传label
 
 {
-    "identity-barcode-list": ["1Zxxxx1", "1Zxxxx2", "1Zxxxx3", "1Zxxxx4", "1Zxxxx5"],
+    "why": "api_update_package_label",
     "ship-type": "custom_ship_out",
-    "PdfDocument": "文档的base64编码",
-    "PdfType": "PackageLabel_4x6_2_page",
     "action": "update_or_create",
-    "why": "api_update_package_label"
+    
+    #如果shipment-id 有指定，但是系统未检索到，会返回错误
+    #如果shipment-id 未指定，系统会先检索提供的fba-shipment-id 是否存在对应的shipment，
+    ##如果存在，则是update 信息
+    ##如果不存在，则会创建shipment，并将提供的fba-shipment-id 作为shipment 信息一部分存储
+    #如果shipment-id 和 fba-shipment-id 都未指定，系统自动创建shipment, 但是fba-shipment-id为空
+    
+    "shipment-id": "6",
+    "fba-shipment-id": "FBAxxx1", 
+    
+    "identity-barcode-list": [
+        "1Zxxxx1",
+        "1Zxxxx2",
+        "1Zxxxx3",
+        "1Zxxxx4",
+        "1Zxxxx5"
+    ],
+    "PdfDocument": "encoded_string",
+    "PdfType": "PackageLabel_4x6_2_page"
 }
 
-正常会返回 shipment id
+正常会返回 shipment-id, fba-shipment-id
 
 ============================================================================
-如果需要修改 指定shipment id 的内容，需要指定shipment-id
+删除shipment
+
 {
-    "identity-barcode-list": ["1Zxxxx1", "1Zxxxx2", "1Zxxxx3", "1Zxxxx4", "1Zxxxx5"],
-    "ship-type": "custom_ship_out",
-    "PdfDocument": "文档的base64编码",
-    "PdfType": "PackageLabel_4x6_2_page",
-    "action": "update_or_create",
     "why": "api_update_package_label",
+    "ship-type": "custom_ship_out",
+    "action": "delete",
+    #系统会根据shipment-id或者fba-shipment-id 来查找符合的shipemnt 并删除
     "shipment-id": "6",
+    "fba-shipment-id": "FBAxxx1",  
 }
 
 
