@@ -412,30 +412,31 @@ gone，错误的信息
         "action": "by_removal_shipment",
         "ship-type": "custom_ship_out",
         "why": "api_obtain_inbound_status",
-        "identity": "LJYA9"
+        "identity": "CZ181"
     },
+    "removal_shipment_status": "finished",
+    "identity": "CZ181",
     "details": [{
-            "status": "created",
+            "status": "audit",
             "box_qty": 1,
-            "identity-barcode": "1Zxxxx1",
-            "last_modify_time": "2018-09-17 19:10:12+00:00"
+            "identity-barcode": "1Axxxx1",
+            "last_modify_time": "2018-09-18 23:21:07+00:00"
         }, {
-            "status": "created",
+            "status": "exception",
             "box_qty": 1,
-            "identity-barcode": "1Zxxxx2",
-            "last_modify_time": "2018-09-17 19:10:14+00:00"
+            "identity-barcode": "1Axxxx2",
+            "last_modify_time": "2018-09-18 23:21:07+00:00"
         }, {
-            "status": "created",
+            "status": "gone",
             "box_qty": 1,
-            "identity-barcode": "1Zxxxx3",
-            "last_modify_time": "2018-09-17 19:10:15+00:00"
+            "identity-barcode": "1Axxxx3",
+            "last_modify_time": "2018-09-18 23:21:08+00:00"
         }, {
-            "status": "created",
+            "status": "audit",
             "box_qty": 1,
-            "identity-barcode": "1Zxxxx4",
-            "last_modify_time": "2018-09-17 19:10:17+00:00"
-        }],
-    "identity": "LJYA9"
+            "identity-barcode": "1Axxxx4",
+            "last_modify_time": "2018-09-18 23:21:08+00:00"
+        }]
 }
 ```
 
