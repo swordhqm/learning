@@ -327,6 +327,8 @@ update\_package\_label
     ],
     "PdfDocument": "encoded_string",
     "PdfType": "PackageLabel_4x6_2_page"
+    #shipent-type 默认为 ‘to_amazon_fba’ 如果需要发第三方仓库请指定为‘to_third_warehouse’
+    "shipment-type": "to_third_warehouse"
 }
 
 正常会返回 shipment-id, fba-shipment-id
